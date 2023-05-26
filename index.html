@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador | Oracle+AluraLATAM</title>
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor header">
+        <div class="flex" data-aos="fade-right">
+          <img src="./img/logo.svg" alt="Logo de Alura" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="contenedor">
+        <div class="encriptador">
+          <form class="encriptador_form" data-aos="fade-right">
+            <div class="text_in">
+              <textarea
+                name="text_in_area"
+                id="texto"
+                placeholder="Texto a encriptar"
+                required
+              ></textarea>
+              <div class="text_in_info">
+                <div class="info">
+                  <p id="warning">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="text_in_btns">
+                  <div
+                    class="btn btn-large waves-effect indigo rounded"
+                    id="enc"
+                  >
+                    Encriptar
+                  </div>
+                  <div
+                    class="btn btn-large waves-effect indigo rounded"
+                    id="des"
+                  >
+                    desencriptar
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="text_out_sec">
+            <div class="out_content" data-aos="fade-left">
+              <div class="content" id="default">
+                <div class="text_out_img">
+                  <img src="./img/search.png" alt="Imagen de animada" />
+                </div>
+                <p>Sin Mensajes 👀</p>
+                <p>Ingresa un texto para encriptar.</p>
+              </div>
+              <div class="content invisible" id="result">
+                <textarea
+                  name="text_out_area"
+                  id="texto_out"
+                  disabled
+                ></textarea>
+                <div
+                  class="btn btn-large waves-effect white indigo-text rounded"
+                  id="copiar"
+                  onclick="M.toast({html: 'Texto copiado!'})"
+                >
+                  Copiar
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="indigo py-1">
+        <div class="container white-text flex">
+          <h5>Marlon Castellanos</h5>
+          <div>
+            <a
+              href="https://www.youtube.com/channel/UC9JS6nsTWm7zGN3QUmTSJkg"
+              class="btn-flat white-text"
+              ><i class="ri-youtube-line"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/cursandina"
+              class="btn-flat white-text"
+              ><i class="ri-facebook-circle-line"></i
+            ></a>
+            <a href="https://cursandina.com" class="btn-flat white-text"
+              ><i class="ri-earth-line"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/encriptador.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
